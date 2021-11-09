@@ -42,28 +42,38 @@ export const setGanttConfig = (gantt) => {
 
   gantt.config.columns = [
     {
-      name: 'id',
-      label: 'No.',
-      align: 'left',
-      tree: true,
-      width: '120',
-      template: (obj) => {
-        var befweek = new Date();
-        befweek.setDate(befweek.getDate() - 7);
-        if (obj.update < befweek.toLocaleDateString()) {
-          return (
-            obj.id +
-            "<a title='There is no update for a week.'><span class='overdue'>i</span></a>"
-          );
-        }
-        return obj.id;
-      },
+      name: "text", 
+      label: "Title",
+      tree: true, 
+      width: '400', 
+      resize: true
     },
+
+    // {
+    //   name: 'id',
+    //   label: 'No.',
+    //   align: 'left',
+    //   tree: true,
+    //   width: '120', 
+    //   resize: true,
+    //   template: (obj) => {
+    //     var befweek = new Date();
+    //     befweek.setDate(befweek.getDate() - 7);
+    //     if (obj.update < befweek.toLocaleDateString()) {
+    //       return (
+    //         obj.id +
+    //         "<a title='There is no update for a week.'><span class='overdue'>i</span></a>"
+    //       );
+    //     }
+    //     return obj.id;
+    //   },
+    // },
     {
       name: 'start_date',
       label: 'Start ',
       align: 'center',
-      width: '60',
+      width: '60', 
+      resize: true,
       template: (obj) => {
         return shortenDate(obj.start_date);
       },
@@ -72,7 +82,8 @@ export const setGanttConfig = (gantt) => {
       name: 'due_date',
       label: 'Due ',
       align: 'center',
-      width: '60',
+      width: '60', 
+      resize: true,
       template: (obj) => {
         return shortenDate(obj.due_date);
       },

@@ -129,7 +129,7 @@ const styles = (theme) => ({
 
 const selector_style = {
   multiselectContainer: {
-    width: '27%',
+    width: '35%',
     display: 'inline-block',
     verticalAlign: 'middle',
     padding: '4px',

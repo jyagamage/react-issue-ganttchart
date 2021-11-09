@@ -107,8 +107,8 @@ export const getGitHubAPIURLLabel = (git_url) => {
     GitHubAPIURL +
     getGitHubNameSpaceFromGitURL(git_url) +
     '/' +
-    getGitHubProjectFromGitURL(git_url) +
-    '/labels'
+    getGitHubProjectFromGitURL(git_url)
+     + '/labels'
   );
 };
 
